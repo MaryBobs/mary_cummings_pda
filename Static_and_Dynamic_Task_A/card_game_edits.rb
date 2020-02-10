@@ -10,7 +10,7 @@ def initialize(cards)
 end
 
   def check_for_ace(card)
-    if Card.value = 1
+    if card.value == 1
       return true
     else
       return false

@@ -1,7 +1,7 @@
 ### Testing task 1:
 
 # Carry out static testing on the code below.
-# Comment on any errors that you see below.
+# Comment on any errors that you see below. 
 ```ruby
 
 class CardGame
@@ -9,7 +9,7 @@ class CardGame
 #no def initialize?
 
   def checkforAce(card) #should be check_for_ace()
-    if card.value = 1   #should be Card.value
+    if card.value = 1   #should be == not =
       return true
     else
       return false

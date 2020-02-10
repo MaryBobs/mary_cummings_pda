@@ -15,13 +15,20 @@ describe('calculator', function () {
     const expected = 5;
     calculator.previousTotal = 4;
     calculator.add(1);
-    assert.equal(calculator.runningTotal, expected);
+    assert.deepStrictEqual(calculator.runningTotal, expected);
   });
 
   it("it can subtract 4 from 7 and get 3", function(){
     const expected = 3;
     calculator.previousTotal = 7;
     calculator.subtract(4);
-    assert.equal(calculator.runningTotal, expected)
+    assert.deepStrictEqual(calculator.runningTotal, expected)
+  })
+
+  it("it can multiply 3 by 5 and get 15", function(){
+    const expected = 15;
+    calculator.previousTotal = 3;
+    calculator.multiply(5)
+    assert.deepStrictEqual(calculator.runningTotal, expected)
   })
 });

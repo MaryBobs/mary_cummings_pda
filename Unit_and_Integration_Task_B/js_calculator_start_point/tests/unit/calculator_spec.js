@@ -38,4 +38,11 @@ describe('calculator', function () {
     calculator.divide(7);
     assert.deepStrictEqual(calculator.runningTotal, expected)
   })
+
+  it("it can concantenate 2 and 5 to make 25", function(){
+    const expected = 25;
+    calculator.numberClick(2);
+    calculator.numberClick(5);
+    assert.deepStrictEqual(calculator.runningTotal, expected)
+  })
 });

@@ -13,7 +13,7 @@ def setup
   @queen_of_clubs = Card.new("clubs", 12)
 
   @cards = [@ace_of_clubs, @ace_of_diamonds, @two_of_clubs, @ten_of_clubs, @queen_of_clubs]
-  @game = CardGame.new(@cards)
+  @game = CardGame.new()
 end
 
 
@@ -37,6 +37,10 @@ def test_canFindHighestCardwhenItIsCard2()
   card1 = @ace_of_diamonds
   card2 = @ten_of_clubs
   assert_equal(card2, @game.highest_card(card1, card2))
+end
+
+def test_canGetTotalOfAllCards()
+  assert_equal("You have a total of 26", @game.cards_total(@cards))
 end
 
 end

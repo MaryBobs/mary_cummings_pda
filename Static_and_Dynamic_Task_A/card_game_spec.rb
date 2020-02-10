@@ -27,20 +27,20 @@ def test_checkforAce_not()
   assert_equal(false, @game.check_for_ace(card))
 end
 
-def test_canFindHighestCardwhenItIsCard1()
-  card1 = @queen_of_clubs
-  card2 = @two_of_clubs
-  assert_equal(card1, @game.highest_card(card1, card2))
-end
+# def test_canFindHighestCardwhenItIsCard1()
+#   card1 = @queen_of_clubs
+#   card2 = @two_of_clubs
+#   assert_equal(card1, @game.highest_card(card1, card2))
+# end
 
-def test_canFindHighestCardwhenItIsCard2()
-  card1 = @ace_of_diamonds
-  card2 = @ten_of_clubs
-  assert_equal(card2, @game.highest_card(card1, card2))
-end
+# def test_canFindHighestCardwhenItIsCard2()
+#   card1 = @ace_of_diamonds
+#   card2 = @ten_of_clubs
+#   assert_equal(card2, @game.highest_card(card1, card2))
+# end
 
-def test_canGetTotalOfAllCards()
-  assert_equal("You have a total of 26", @game.cards_total(@cards))
-end
+# def test_canGetTotalOfAllCards()
+#   assert_equal("You have a total of 26", @game.cards_total(@cards))
+# end
 
 end

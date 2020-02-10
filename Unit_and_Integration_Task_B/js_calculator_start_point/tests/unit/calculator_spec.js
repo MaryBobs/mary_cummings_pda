@@ -18,4 +18,10 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, expected);
   });
 
+  it("it can subtract 4 from 7 and get 3", function(){
+    const expected = 3;
+    calculator.previousTotal = 7;
+    calculator.subtract(4);
+    assert.equal(calculator.runningTotal, expected)
+  })
 });

@@ -31,4 +31,11 @@ describe('calculator', function () {
     calculator.multiply(5)
     assert.deepStrictEqual(calculator.runningTotal, expected)
   })
+
+  it("it can divide 21 by 7 and get 3", function(){
+    const expected = 3;
+    calculator.previousTotal = 21;
+    calculator.divide(7);
+    assert.deepStrictEqual(calculator.runningTotal, expected)
+  })
 });

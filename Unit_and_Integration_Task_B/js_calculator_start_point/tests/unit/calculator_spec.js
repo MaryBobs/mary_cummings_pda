@@ -45,4 +45,14 @@ describe('calculator', function () {
     calculator.numberClick(5);
     assert.deepStrictEqual(calculator.runningTotal, expected)
   })
+
+  it("it can chain 2 + + + to make 8", function(){
+    const expected = 8;
+    calculator.numberClick(2);
+    calculator.operatorClick('+');
+    calculator.operatorClick('+');
+    calculator.operatorClick('+');
+    assert.deepStrictEqual(calculator.runningTotal, expected)
+  })
+
 });

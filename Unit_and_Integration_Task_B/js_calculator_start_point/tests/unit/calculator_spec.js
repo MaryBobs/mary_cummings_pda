@@ -64,14 +64,15 @@ describe('calculator', function () {
     assert.deepStrictEqual(calculator.runningTotal, expected)
   })
 
-  // it("it can clear the running total without affecting calculation", function(){
-  //   const expected = 7;
-  //   calculator.numberClick(2);
-  //   calculator.operatorClick('+');
-  //   calculator.numberClick(5);
-  //   calculator.clearClick;
-  //   assert.deepStrictEqual(calculator.runningTotal, 0);
-  //   assert.deepStrictEqual(calculator.previousTotal, expected);
-  // })
+  it("it can clear the running total without affecting calculation", function(){
+    const expected = 7;
+    calculator.numberClick(2);
+    calculator.operatorClick('+');
+    calculator.numberClick(5);
+    calculator.operatorClick('+');
+    calculator.clearClick();
+    assert.deepStrictEqual(calculator.runningTotal, 0);
+    assert.deepStrictEqual(calculator.previousTotal, expected);
+  })
 
 });

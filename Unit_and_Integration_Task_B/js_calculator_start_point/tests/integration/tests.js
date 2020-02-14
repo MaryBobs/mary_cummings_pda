@@ -44,4 +44,12 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('256')
   })
 
+  it("should display positive numbers when expected", function(){
+    element(by.css('#number5')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number7')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('12')
+  })
+
 });

@@ -60,4 +60,12 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('-2')
   })
 
+  it("should display decimal numbers", function(){
+    element(by.css('#number9')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('1.8')
+  })
+
 });
